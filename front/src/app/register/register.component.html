@@ -1,0 +1,38 @@
+<div class="register-container">
+    <form class="register-form">
+        <mat-card>
+            <mat-card-title>Mobilité TSE</mat-card-title>
+            <mat-card-subtitle>Créer votre compte</mat-card-subtitle>
+            <mat-card-content>
+
+                <mat-form-field class="full-width">
+                    <input id="nomInput" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}" matInput placeholder="Nom">
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input id="prenomInput" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}" matInput placeholder="Prenom">
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input id="promotion" [(ngModel)]="promotion" [ngModelOptions]="{standalone: true}" matInput
+                      placeholder="Promotion" type="text">
+                  </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input id="passwordInput1" [(ngModel)]="pwd1" [ngModelOptions]="{standalone: true}" matInput placeholder="Mot de passe" type="password">
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <input id="passwordInput2" [(ngModel)]="pwd2" [ngModelOptions]="{standalone: true}" matInput placeholder="Confirmer le mot de passe" type="password">
+                </mat-form-field>
+
+            </mat-card-content>
+
+            <mat-card-actions class="register-form-actions">
+                <button mat-raised-button id="register-button" (click)="createAccount()">Créer</button>
+                <button mat-button id="backToLogin-button" (click)="backToLogin()" type="button">Retour</button>
+            </mat-card-actions>
+
+        </mat-card>
+    </form>
+</div>

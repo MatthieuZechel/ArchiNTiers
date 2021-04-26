@@ -1,0 +1,30 @@
+table {
+    width: 80%;
+}
+
+h1{
+    text-align: center;
+}
+
+img {
+    max-width:40%; 
+    max-height:40%;
+    float: right;
+}
+
+#page {
+    width: 210mm;
+    margin: 0 auto;
+}
+
+.mobility-table-container{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mobility-table-header{
+    color : white;
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+<div class="login-container">
+    <form class="login-form">
+        <mat-card>
+            <mat-card-title>Bienvenue sur le site Mobilité TSE</mat-card-title>
+            <mat-card-subtitle>Connectez vous à votre compte :</mat-card-subtitle>
+            <mat-card-content>
+
+                <mat-form-field class="full-width">
+                    <input id="loginInput" [(ngModel)]="credentials" [ngModelOptions]="{standalone: true}" matInput placeholder="Login (nom.prenom)" autocomplete="nom.prenom" type="text">
+                </mat-form-field>
+                    
+                <mat-form-field class="full-width">
+                    <input id="motDePasseInput" [(ngModel)]="motDePasse" [ngModelOptions]="{standalone: true}" matInput placeholder="Mot de passe" type="password" autocomplete="current-password">
+                </mat-form-field>
+
+            </mat-card-content>
+
+            <mat-card-actions class="login-form-actions">
+                <button type='button' mat-raised-button id="login-button" (click)="login()">Connexion</button>
+                <button  mat-button id="createAccount" (click)="createAccount()" type="button">Créer un compte</button>
+            </mat-card-actions>
+
+        </mat-card>
+
+    </form>
+</div>

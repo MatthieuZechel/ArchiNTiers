@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="addMobility-container">
+  <form class="addMobility-form">
+    <mat-card>
+      <mat-card-title>Ajouter une mobilité</mat-card-title>
+
+      <mat-form-field class="full-width">
+        <input id="paysDestination" [(ngModel)]="paysDestination" [ngModelOptions]="{standalone: true}" matInput
+          placeholder="Pays de destination" type="text">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input id="villeDestination" [(ngModel)]="villeDestination" [ngModelOptions]="{standalone: true}" matInput
+          placeholder="Ville de destination" type="text">
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill" class="example-form-field">
+        <mat-label>Choissisez une date de début</mat-label>
+        <input matInput [(ngModel)]="dateDebut" [ngModelOptions]="{standalone: true}" [matDatepicker]="datepicker">
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Annuler</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Valider</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="example-form-field">
+        <mat-label>Choissisez une date de fin</mat-label>
+        <input matInput [(ngModel)]="dateFin" [ngModelOptions]="{standalone: true}" [matDatepicker]="datepicker2">
+        <mat-datepicker-toggle matSuffix [for]="datepicker2"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker2>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Annuler</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Valider</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </mat-form-field>
+
+      <mat-card-actions class="add-mobility-actions">
+        <button mat-button id="addMobility-button" (click)="addMobility()" type="button">Valider</button>
+        <button mat-button id="home" (click)="returnHome()" type="button">Retour à l'accueil</button>
+      </mat-card-actions>
+
+    </mat-card>
+
+  </form>
+
+</div>
